@@ -11,7 +11,7 @@
                 name: 'date',
                 type: 'range',
                 index: 4,
-                value: 'dt',
+                value: 'dt', 
             }
         ]"
     ></app-page-index>
