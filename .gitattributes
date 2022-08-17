@@ -2,9 +2,11 @@
 
 *.blade.php diff=html
 *.css diff=css
+*.css linguist-detectable=false
 *.html diff=html
 *.md diff=markdown
 *.php diff=php
+*.php linguist-detectable=false
 
 /.github export-ignore
 CHANGELOG.md export-ignore
