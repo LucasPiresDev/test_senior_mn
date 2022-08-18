@@ -14,5 +14,6 @@ class State extends Model
         'name',
         'code',
         'country',
+        'active',
     ];
 }

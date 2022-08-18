@@ -6,12 +6,21 @@
         :entity="'states'"
         :url="'states'"
         :columns="{{ json_encode($columns) }}"
+        :indexstatusfilter="4"
         :filters="[
             {
-                name: 'date',
-                type: 'range',
-                index: 4,
-                value: 'dt', 
+                type: 'select',
+                name: 'code',
+                index: 5,
+                label: 'Código',
+                options: {{ json_encode($codes) }}
+            },
+            {
+                type: 'select',
+                name: 'country',
+                index: 6,
+                label: 'País',
+                options: {{ json_encode($countries) }}
             }
         ]"
     ></app-page-index>

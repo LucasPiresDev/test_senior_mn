@@ -31,6 +31,7 @@
       },
     }"
     :filters="this.filters"
+    :statusFilterIndex="this.indexstatusfilter"
   ></data-tables>
 </template>
 
@@ -44,7 +45,8 @@ export default {
     columns: Array,
     url: String,
     entity: String,
-    filters: Array,
+    filters: { type: Array, default: [] },
+    indexstatusfilter: { type: Number, default: -1 },
   },
   components: {
     "app-page-header": PageHeader,

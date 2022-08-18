@@ -14,6 +14,7 @@ class UserController extends Controller
             ['title' => 'ID', 'field' => 'id', 'data' => 'id'],
             ['title' => 'Nome', 'field' => 'name', 'data' => 'name'],
             ['title' => 'Email', 'field' => 'email', 'data' => 'email'],
+            ['field' => 'active', 'data' => 'active', 'visible' => false],
         ];
 
         return view('users.index', compact('columns'));

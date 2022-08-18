@@ -14,9 +14,20 @@ class CityController extends Controller
             ['title' => 'ID', 'field' => 'id', 'data' => 'id'],
             ['title' => 'Nome', 'field' => 'name', 'data' => 'name'],
             ['title' => 'Estado', 'field' => 'state.code', 'data' => 'state.code'],
+            ['field' => 'active', 'data' => 'active', 'visible' => false],
+            ['field' => 'state.code', 'data' => 'state_id', 'visible' => false],
         ];
 
-        return view('cities.index', compact('columns'));
+        $states = State::query()
+            ->get()
+            ->map(function ($state) {
+                return [
+                    'value' => $state->id,
+                    'label' => $state->code,
+                ];
+            });
+
+        return view('cities.index', compact('columns', 'states'));
     }
 
     public function create()

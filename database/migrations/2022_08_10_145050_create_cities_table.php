@@ -18,6 +18,7 @@ class CreateCitiesTable extends Migration
             $table->unsignedBigInteger('id')->autoIncrement();
             $table->foreignIdFor(State::class)->constrained()->onDelete('cascade');
             $table->string('name', 100);
+            $table->integer('active')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });

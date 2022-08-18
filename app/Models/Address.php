@@ -15,6 +15,7 @@ class Address extends Model
         'street',
         'complement',
         'number',
+        'active',
     ];
 
     public function city()

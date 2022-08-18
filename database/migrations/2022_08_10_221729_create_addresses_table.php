@@ -20,6 +20,7 @@ class CreateAddressesTable extends Migration
             $table->string('street', 100);
             $table->string('complement', 100)->nullable();
             $table->integer('number');
+            $table->integer('active')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });
